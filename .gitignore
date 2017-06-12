@@ -62,4 +62,4 @@ typings/
 .DS_Store
 
 # config
-config/
+config/default.json
