@@ -1,7 +1,7 @@
 {
   "user":{
-    "userNumber":"xxx",
-    "userPassword":"xxx"
+    "userNumber":"xxxxx",
+    "userPassword":"xxxxx"
   },
   "api_url":"/api/v1"
 }

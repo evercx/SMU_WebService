@@ -60,3 +60,6 @@ typings/
 # ide file
 .idea
 .DS_Store
+
+# config
+config/
