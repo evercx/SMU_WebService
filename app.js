@@ -5,6 +5,8 @@ const json = require('koa-json');
 const onerror = require('koa-onerror');
 const bodyparser = require('koa-bodyparser');
 const logger = require('koa-logger');
+const restc = require('restc');
+
 
 const index = require('./routes/index');
 const users = require('./routes/users');
@@ -32,6 +34,8 @@ app.use(async (ctx, next) => {
   console.log(`${ctx.method} ${ctx.url} - ${ms}ms`)
 });
 
+// use restc middleware
+app.use(restc.koa2());
 // routes
 app.use(index.routes(), index.allowedMethods());
 app.use(users.routes(), users.allowedMethods());
