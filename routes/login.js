@@ -5,8 +5,11 @@
 
 const config = require('config');
 const router = require('koa-router')();
+const login_controller = require('../controllers/login_controller')
+
 router.prefix(config.get("api_url"));
 
-router.get('/', function (ctx, next) {
-    ctx.body = 'this is a users response!'
-})
+
+router.post('/login', login_controller.login);
+
+module.exports = router;

@@ -9,6 +9,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "axios": "^0.16.2",
+    "cheerio": "^1.0.0-rc.1",
     "config": "^1.26.1",
     "debug": "^2.6.3",
     "koa": "^2.2.0",
@@ -21,7 +23,11 @@
     "koa-static": "^3.0.0",
     "koa-views": "^5.2.1",
     "pug": "^2.0.0-rc.1",
-    "restc": "0.0.7"
+    "querystring": "^0.2.0",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1",
+    "restc": "0.0.7",
+    "superagent": "^3.5.2"
   },
   "devDependencies": {
     "nodemon": "^1.8.1"

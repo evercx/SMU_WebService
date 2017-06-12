@@ -9,7 +9,7 @@ var postLoginHeaders = {
     'Connection':'keep-alive',
     'Host':'jwxt.shmtu.edu.cn',
     //'Origin':'https://cas.shmtu.edu.cn',
-    'Cookie':[ 'JSESSIONID=AFE4BE6423C6E5A64A9310A29B98C242; Path=/shmtu/; HttpOnly',
+    'Cookie':[ 'JSESSIONID=612C57B42147E07D5494DCDCEE501DE5; Path=/shmtu/; HttpOnly',
   'SVRNAME=xk13; path=/' ],
     'Referer':'http://jwc.shmtu.edu.cn/LinkText.aspx?id=b47acdbc-d1e4-41a5-a29b-e9c8d6437c31',
     //'Referer':'https://cas.shmtu.edu.cn/cas/login?service=http%3A%2F%2Fportal.shmtu.edu.cn%2Fdcp%2Findex.jsp',
