@@ -1,6 +1,6 @@
 # 接口文档
 
-本项目的接口服务主要分为登录接口和查询接口。调用者必须先请求登录接口获取`token_id`，再携带其请求查询接口才能正常获取数据。
+本项目的接口服务主要分为登录接口和查询接口。调用者必须先请求登录接口获取`token_id`，再携带`token_id`请求查询接口才能正常获取数据。
 
 
 
@@ -29,8 +29,8 @@ Accept: application/json
 Content-Type: application/json
 
 {
-	"userNumber":"xxx",
-  	"userPassword":"xxx"
+  "userNumber":"xxx",
+  "userPassword":"xxx"
 }
 ```
 
@@ -78,4 +78,3 @@ Vary: Accept
 | :--: | :----: |
 | 200  | 成功返回信息 |
 | 401  | 用户登录失败 |
-
