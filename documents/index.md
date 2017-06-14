@@ -41,6 +41,7 @@ Content-Type: application/json
 | status   | string | 状态码             |
 | msg      | string | 返回信息描述          |
 | token_id | string | 用户的标识符 查询接口所需参数 |
+| userName | string | 用户的姓名           |
 
 #### 返回示例
 
@@ -54,7 +55,8 @@ Vary: Accept
 {
   "status":"200",
   "msg":"登录成功",
-  "token_id":"xxxxxxxx"
+  "token_id":"xxxxxxxx",
+  "userName":"xxx"
 }
 ```
 
@@ -65,8 +67,6 @@ Vary: Accept
 | 接口名称                                     | 接口说明           |
 | :--------------------------------------- | :------------- |
 | [smu.jwxt.student_detail](./smu.jwxt.student_detail.md) | 返回教务系统中的学生基本信息 |
-
-
 
 
 

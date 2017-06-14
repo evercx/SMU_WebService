@@ -22,12 +22,13 @@ module.exports = {
 
         try {
 
-            let token_id = await login_jwxt.getSessionidFromJwxt(userNumber,userPassword);
-            console.log(token_id);
+            let resultObj = await login_jwxt.getUseridFromJwxt(userNumber,userPassword);
+            console.log(resultObj.token_id);
             ctx.body = {
                 "status":"200",
                 "msg":"登陆成功",
-                "token_id":token_id
+                "token_id":resultObj.token_id,
+                "userName":resultObj.userName
             };
 
         } catch (err) {
