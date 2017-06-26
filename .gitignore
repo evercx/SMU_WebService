@@ -63,3 +63,6 @@ typings/
 
 # config
 /config/default.json
+
+# HTTPS
+/https

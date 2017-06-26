@@ -7,6 +7,8 @@
 var app = require('../app');
 var debug = require('debug')('demo:server');
 var http = require('http');
+var https = require('https');
+var fs = require('fs');
 
 /**
  * Get port from environment and store in Express.
@@ -19,17 +21,29 @@ var port = normalizePort(process.env.PORT || '3065');
  * Create HTTP server.
  */
 
+
 var server = http.createServer(app.callback());
 
 /**
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(port,function(){
-  console.log("This server is listening on the port:" + port);
+var PORT = 18080;
+var SSLPORT = 18081;
+
+server.listen(PORT,function(){
+  console.log("This server is listening on the port:" + PORT);
 });
 server.on('error', onError);
 server.on('listening', onListening);
+
+
+var privateKey  = fs.readFileSync('https/private.pem', 'utf8');
+var certificate = fs.readFileSync('https/file.crt', 'utf8');
+var credentials = {key: privateKey, cert: certificate};
+https.createServer(credentials, app.callback()).listen(SSLPORT,function(){
+  console.log("This server is listening on the port:" + SSLPORT);
+});
 
 /**
  * Normalize a port into a number, string, or false.
