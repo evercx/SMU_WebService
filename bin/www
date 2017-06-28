@@ -29,7 +29,7 @@ var server = http.createServer(app.callback());
  */
 
 var PORT = 18080;
-var SSLPORT = 18081;
+var SSLPORT = 443;
 
 server.listen(PORT,function(){
   console.log("This server is listening on the port:" + PORT);
